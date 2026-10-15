@@ -1,0 +1,13 @@
+[project]
+name = "device-detector"
+version = "1.0.0"
+description = "Local, permission-based Bluetooth LE advertisement monitor with optional webcam object detection"
+requires-python = ">=3.11"
+dependencies = ["PySide6>=6.6", "bleak>=0.22", "opencv-python>=4.9", "onnxruntime>=1.17", "numpy>=1.26", "pyqtgraph>=0.13", "sounddevice>=0.4.6", "psutil>=5.9"]
+
+[project.scripts]
+device-detector = "device_detector.app:main"
+sensor-lab = "device_detector.sensor_lab.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
